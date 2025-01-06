@@ -70,7 +70,7 @@
             $('#scanButton').on('click', function() {
                 $.ajax({
                     url: '{{ route("scan.perform") }}',
-                    type: 'POST',
+                    type: 'POST', 
                     success: function(response) {
                         $('#scanResponse').html('<p>' + response.success + '</p>');
                         $('#scanResponse').append('<img src="' + response.imagePath + '" />');
